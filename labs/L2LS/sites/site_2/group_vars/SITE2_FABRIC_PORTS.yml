@@ -10,14 +10,16 @@ port_profiles:
     vlans: "40"
     spanning_tree_portfast: edge
 
-###########################################################
-# ---------------- Endpoint Connectivity ---------------- #
-###########################################################
+##########################################################
+#---------------- Endpoint Connectivity ---------------- #
+##########################################################
 
 servers:
+
 # --------------------------------------------------------#
 # Site2 RACK1 Endpoints
 # --------------------------------------------------------#
+
   - name: s2-host1                                      # Server name
     rack: RACK1                                         # Informational RACK (optional)
     adapters:
@@ -27,9 +29,11 @@ servers:
         profile: PP-VLAN30                              # Port profile to apply (required)
         port_channel:
           mode: active
+
 # --------------------------------------------------------#
 # Site2 RACK2 Endpoints
 # --------------------------------------------------------#
+
   - name: s2-host2                                      # Server name
     rack: RACK2                                         # Informational RACK (optional)
     adapters:
